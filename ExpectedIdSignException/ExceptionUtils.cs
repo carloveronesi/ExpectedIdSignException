@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Globalization;
 using System.Text;
 
 namespace ExpectedIdSignException
 {
-	internal static class UtfHelper
+	internal static class ExceptionUtils
 	{
 		/// <summary>
 		/// Ottiene i messaggi di eccezione in modo ricorsivo, inclusi quelli relativi a 

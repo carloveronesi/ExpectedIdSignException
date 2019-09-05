@@ -16,6 +16,9 @@ namespace ExpectedIdSignException
 			private set;
 		}
 
+		/// <summary>
+		/// Ottiene un valore che indica il codice dell'eccezione prevista
+		/// </summary>
 		public string ExceptionCode
 		{
 			get;
@@ -76,27 +79,29 @@ namespace ExpectedIdSignException
 		protected override void Verify(Exception exception)
 		{
 			Type type = ((object)exception).GetType();
+			// Getting exception's code
+			string actualExceptionCode = (string)exception.GetType().GetProperty("Code").GetValue(exception);
+			bool isWrongExceptionType;
+
+			// Verifying ExceptionType
 			if (AllowDerivedTypes)
 			{
-				if (!ExceptionType.GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()) || !exception.GetType().GetProperty("Code").GetValue(exception).Equals(ExceptionCode))
-				{
-					RethrowIfAssertException(exception);
-					throw new Exception(string.Format(CultureInfo.CurrentCulture, FrameworkMessages.UTF_TestMethodWrongExceptionDerivedAllowed, new object[3]
-					{
-					type.FullName,
-					ExceptionType.FullName,
-					UtfHelper.GetExceptionMsg(exception)
-					}));
-				}
+				isWrongExceptionType = !ExceptionType.GetTypeInfo().IsAssignableFrom(type.GetTypeInfo());
 			}
-			else if ((object)type != ExceptionType || !exception.GetType().GetProperty("Code").GetValue(exception).Equals(ExceptionCode))
+			else
+			{
+				isWrongExceptionType = (object)type != ExceptionType;
+			}
+
+			// Verifying Exception code and throwing exception in one of the verifications fails
+			if (isWrongExceptionType || !actualExceptionCode.Equals(ExceptionCode))
 			{
 				RethrowIfAssertException(exception);
 				throw new Exception(string.Format(CultureInfo.CurrentCulture, FrameworkMessages.UTF_TestMethodWrongException, new object[3]
 				{
 				type.FullName,
 				ExceptionType.FullName,
-				UtfHelper.GetExceptionMsg(exception)
+				ExceptionUtils.GetExceptionMsg(exception)
 				}));
 			}
 		}
