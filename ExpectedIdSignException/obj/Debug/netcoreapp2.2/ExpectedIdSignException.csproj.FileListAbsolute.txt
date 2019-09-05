@@ -1,0 +1,10 @@
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\bin\Debug\netcoreapp2.2\ExpectedIdSignException.deps.json
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\bin\Debug\netcoreapp2.2\ExpectedIdSignException.dll
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\obj\Debug\netcoreapp2.2\ExpectedIdSignException.csproj.CoreCompileInputs.cache
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\obj\Debug\netcoreapp2.2\ExpectedIdSignException.AssemblyInfoInputs.cache
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\obj\Debug\netcoreapp2.2\ExpectedIdSignException.AssemblyInfo.cs
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\obj\Debug\netcoreapp2.2\ExpectedIdSignException.csproj.GenerateResource.cache
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\obj\Debug\netcoreapp2.2\ExpectedIdSignException.Properties.Resources.resources
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\bin\Debug\netcoreapp2.2\ExpectedIdSignException.pdb
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\obj\Debug\netcoreapp2.2\ExpectedIdSignException.dll
+C:\Users\c.veronesi\Desktop\Backend\ExpectedIdSignException\ExpectedIdSignException\obj\Debug\netcoreapp2.2\ExpectedIdSignException.pdb
